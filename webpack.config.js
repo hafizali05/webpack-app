@@ -15,6 +15,11 @@ module.exports = {
     module : {
         rules :  [
             {
+                test: /\.html$/,
+                exclude: /node_modules/,
+                use: 'raw-loader' // add raw loader npm package to make it work.
+            },
+            {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
@@ -50,9 +55,5 @@ module.exports = {
             title: 'Custom template',
             template: 'index_local.html', // Load a custom template (lodash by default see the FAQ for details)
         })
-        // new HtmlWebpackPlugin({
-        //     title: 'webpack app'
-        //     // filename: 'index_local.html'
-        // })
     ]
 };
