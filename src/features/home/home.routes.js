@@ -1,5 +1,7 @@
 routes.$inject = ['$stateProvider'];
-import home from 'homeTpl.html'
+
+import home from './home.html'
+
 export default function routes($stateProvider) {
     $stateProvider
         .state('home', {
