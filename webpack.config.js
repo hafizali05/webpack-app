@@ -47,7 +47,12 @@ module.exports = {
             allChunks:true
         }),
         new HtmlWebpackPlugin({
-            title: 'webpack app'
+            title: 'Custom template',
+            template: 'index_local.html', // Load a custom template (lodash by default see the FAQ for details)
         })
+        // new HtmlWebpackPlugin({
+        //     title: 'webpack app'
+        //     // filename: 'index_local.html'
+        // })
     ]
 };
