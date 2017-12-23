@@ -1,10 +1,17 @@
+// import randomNames from '../../services/randomNames.service';
 export default class HomeController {
-    // console.log('home controller');
-    constructor() {
+    constructor(randomNames) {
+        this.random = randomNames;
         this.name = 'World';
     }
 
     changeName() {
         this.name = 'angular-tips';
     }
+
+    randomName() {
+        this.name = this.random.getName();
+    }
 }
+
+HomeController.$inject = ['randomNames'];
