@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
+    devtool: 'sourcemap',
     entry : './src/app.js',
     output: {
         filename : 'bundle.js',
